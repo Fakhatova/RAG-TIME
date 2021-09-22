@@ -5,8 +5,12 @@ function App() {
   return (
     <main className="App">
       <header>
-        <h1> RAG Time </h1>
+        <h1 className="title"> RAG Time </h1>
       </header>
+      <article className="intro-container">
+       <p> here is gonna be intro and rules about application</p>
+      </article>
+      <button className="start-btn"> Lets get started </button>
     </main>
   );
 }
