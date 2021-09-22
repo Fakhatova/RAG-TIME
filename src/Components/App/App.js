@@ -12,6 +12,7 @@ function App() {
        <p> here is gonna be intro and rules about application</p>
       </article>
       <button className="start-btn"> Lets get started </button>
+      {/* <Random/> */}
     </main>
   );
 }

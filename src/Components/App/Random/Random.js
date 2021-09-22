@@ -27,6 +27,9 @@ const Random = () => {
        </p>
      </article>
      <button className="generate-btn"> Generate Activity</button>
+     <div>
+         <button className="home-btn">Home</button>
+     </div>
     </section>
     )
 }
