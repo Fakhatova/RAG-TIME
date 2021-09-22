@@ -1,22 +1,32 @@
 // import logo from './logo.svg';
-import Random from '../Random/Random'
-import ErrorPage from '../ErrorPage/ErrorPage'
-import { ApiData } from '../API/AppiCalls';
+import {useState, useEffect} from 'react'
+// import Random from '../Random/Random'
+// import ErrorPage from '../ErrorPage/ErrorPage'
+// import { ApiData } from '../API/AppiCalls';
+import PopUp from '../Modal/PopUp';
 import './App.css';
 // ApiData.fetchAll() fetches object
 
-function App() {
+const  App = () => {
+  const [timedPopUp, setTimedPopUp] = useState(false)
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+    setTimedPopUp(true)
+    }, 2500)
+  }, [])
+
   return (
+    <div className="App-container">
     <main className="App">
       <header>
-      <h1 className="title"> RAG Time </h1>
+      {/* <h1 className="title"> RAG Time </h1> */}
       </header>
-      <article className="intro-container">
-      <p> here is gonna be intro and rules about application</p>
-      </article>
-      <button className="start-btn"> Lets get started </button>
-      <Random/>
+      {/* <Random/> */}
+      <PopUp trigger={timedPopUp}/>
     </main>
+    </div>
   );
 }
 
