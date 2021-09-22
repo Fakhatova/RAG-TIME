@@ -5,7 +5,7 @@
     height: 80vh;
     background-color: #282c3452;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -18,8 +18,11 @@
     max-width: 640px;
     height: 200px;
 }
-.popup-inner.start-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+.start-btn {
+    width: 145px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background: #ffe4c4;
+    font-size: larger;
 }
