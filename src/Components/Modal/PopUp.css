@@ -5,16 +5,18 @@
     height: 80vh;
     background-color: #282c3452;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .popup-inner {
     position: relative;
-    padding: 32px;
+    padding: 20px;
     width: 100%;
     max-width: 640px;
-    background-color: chocolate;
+    height: 200px;
 }
 .popup-inner.start-btn {
     position: absolute;
