@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import Random from './Random/Random'
+import ErrorPage from './ErrorPage/ErrorPage'
 import './App.css';
 
 function App() {

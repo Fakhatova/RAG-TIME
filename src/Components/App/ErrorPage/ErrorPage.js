@@ -8,3 +8,5 @@ const ErrorPage = () => {
         </p>
     )
 }
+
+export default ErrorPage;
