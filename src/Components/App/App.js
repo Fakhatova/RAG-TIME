@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import {useState, useEffect} from 'react'
 import {Route, Switch, useHistory} from 'react-router-dom';
-// import Random from '../Random/Random'
+import Random from '../Random/Random'
 // import ErrorPage from '../ErrorPage/ErrorPage'
 // import { ApiData } from '../API/AppiCalls';
 import PopUp from '../Modal/PopUp';
@@ -20,7 +20,7 @@ const  App = () => {
   
   const handleStartBtn = (e) => {
   e.preventDefault()
-  // history.push()
+  history.push('/Activity')
   console.log('I am clicking')
   }
     return (
@@ -33,8 +33,12 @@ const  App = () => {
             </main>
           )
         }}/>
+        <Route exact path='/:Activity' render={({match}) => {
+          return (
+            <Random/>
+          )
+        }}/>
       </Switch>
-    
     </div>
   );
 }
