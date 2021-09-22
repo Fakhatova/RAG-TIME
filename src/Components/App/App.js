@@ -11,11 +11,11 @@ const  App = () => {
   const [timedPopUp, setTimedPopUp] = useState(false)
   
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //   setTimedPopUp(true)
-  //   }, 2500)
-  // })
+  useEffect(() => {
+    setTimeout(() => {
+    setTimedPopUp(true)
+    }, 2500)
+  }, [])
 
   return (
     <div className="App-container">
