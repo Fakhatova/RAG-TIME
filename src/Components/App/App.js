@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import Random from './Random/Random'
 import './App.css';
 
 function App() {
