@@ -17,6 +17,12 @@
     width: 100%;
     max-width: 640px;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 .start-btn {
     width: 145px;
