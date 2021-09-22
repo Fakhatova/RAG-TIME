@@ -6,7 +6,7 @@ const PopUp = (props) => {
         <article className="popup-inner">
         <p> here is gonna be intro and rules about application</p>
         </article>
-        <button className="start-btn"> Lets get started </button>
+        <button className="start-btn" onClick={(e) => props.handleStartBtn(e)}> Lets get started </button>
         </div>
     ) : "";
 }
