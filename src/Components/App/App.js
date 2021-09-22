@@ -3,9 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <main className="App">
+      <header>
+        <h1> RAG Time </h1>
+      </header>
+    </main>
   );
 }
 
