@@ -5,7 +5,7 @@ import { useEffect } from 'react/cjs/react.development';
 
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
-    const [activity, setActivity] = useState('');
+    const [activity, setActivity] = useState({});
     const [disabled, setDisabled] = useState(true)
 
     // I need to use useEffect method to update state, after 
@@ -17,6 +17,19 @@ const handleCategory = (e) => {
     setDisabled(false)
 }
 
+const handleButtonClick = (e) => {
+    e.preventDefault()
+    if(optionValue === 'all') {
+        ApiData.fetchAll()
+        .then(data => setActivity(data))
+        setOptionValue('Select Category')
+    }else {
+        ApiData.fetchType(optionValue)
+        .then(data => setActivity(data))
+        setOptionValue('Select Category')
+    }
+
+}
     return (
     // <div className="Activity">
     <section className="randomizer-container container">
@@ -40,7 +53,7 @@ const handleCategory = (e) => {
         Place for activity randomized
     </p>
     <div className="Btn-container">
-    <button className="generate-btn" disabled={disabled}> Generate Activity</button>
+    <button className="generate-btn" disabled={disabled} onClick={(e) => handleButtonClick(e)}> Generate Activity</button>
     </div>
     <div>
         <button className="home-btn">Home</button>

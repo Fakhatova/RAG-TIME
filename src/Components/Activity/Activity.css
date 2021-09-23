@@ -65,7 +65,6 @@
 }
 
 .Btn-container {
-    background-color: darkolivegreen;
     width: 300px;
     height: 60px;
     display: flex;
@@ -79,6 +78,15 @@
     font-size: large;
     border-radius: 3px;
     border: transparent;
+    /* background-color: aqua; */
+}
+.generate-btn disabled {
+    width: 200px;
+    height: 37px;
+    font-size: large;
+    border-radius: 3px;
+    border: transparent;
+    background-color: grey;
 }
 
 .drop-down {
