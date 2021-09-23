@@ -6,22 +6,22 @@ import { useEffect } from 'react/cjs/react.development';
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
     const [activity, setActivity] = useState('');
+    const [disabled, setDisabled] = useState(true)
 
     // I need to use useEffect method to update state, after 
     // button generate activity has been clicked and set fetched object
     // to local host, and on page refresh to stay on DOM
-    console.log('here',optionValue)
 
-
-const handleChange = (e) => {
+const handleCategory = (e) => {
     setOptionValue(e.target.value);
+    setDisabled(false)
 }
 
     return (
-    <div className="Activity">
+    // <div className="Activity">
     <section className="randomizer-container container">
     <div className="dropdown-container">
-    <select className="drop-down" id="dropDown" value={optionValue} onChange={handleChange}>
+    <select className="drop-down" id="dropDown" value={optionValue} onChange={handleCategory}>
     <option value=""> {optionValue}</option>
     <option value="all">All</option>
     <option value="education">Education</option>
@@ -40,14 +40,14 @@ const handleChange = (e) => {
         Place for activity randomized
     </p>
     <div className="Btn-container">
-    <button className="generate-btn"> Generate Activity</button>
+    <button className="generate-btn" disabled={disabled}> Generate Activity</button>
     </div>
     <div>
         <button className="home-btn">Home</button>
     </div>
     </article>
     </section>
-    </div>
+    // </div>
     )
 }
 
