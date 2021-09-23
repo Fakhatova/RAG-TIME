@@ -68,3 +68,11 @@ const handleButtonClick = (e) => {
 }
 
 export default Activity;
+
+
+// We need to set data fetched on butoon click to a localstorage and if page gets refreshed it has to grab
+// set data from localstorage and display on DOM
+// also uaer has to be able to favorite activity card
+// upon click on favorite button it should take user into a new page and 
+//show their favorited card
+// also user has to be able get back to homepage 
