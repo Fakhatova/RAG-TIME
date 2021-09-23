@@ -1,5 +1,6 @@
 .randomizer-container {
-    background-color: rgb(179, 227, 227);
+    background-image: url('/src/Assets/Screenshot\ 2021-09-23\ at\ 9.51.44\ AM.png');
+    /* background-color: rgb(179, 227, 227); */
     height: 100vh;
     display:flex;
 }
@@ -10,7 +11,7 @@
     align-items: center;
     align-content: center;
     width: 30vw;
-    background: yellow;
+    /* background: yellow; */
 }
 
 .activity-container {
@@ -19,7 +20,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    background: aliceblue;
+    /* background: aliceblue; */
     width: 70vw;
 }
 

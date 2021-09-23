@@ -1,10 +1,16 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
 import './Activity.css'
+import { useEffect } from 'react/cjs/react.development';
 
 const Activity = () => {
-    const [option, setOptionValue] = useState('');
+    const [option, setOptionValue] = useState({});
     const [activity, setActivity] = useState('');
+
+    // I need to use useEffect method to update state, after 
+    // button generate activity has been clicked and set fetched object
+    // to local host, and on page refresh to stay on DOM
+
     return (
     <section className="randomizer-container">
     <div className="dropdown-container">
