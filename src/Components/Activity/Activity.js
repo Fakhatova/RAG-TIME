@@ -1,16 +1,11 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
 import './Activity.css'
-import { useEffect } from 'react/cjs/react.development';
 
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
-    const [activity, setActivity] = useState({});
+    const [activity, setActivity] = useState(null);
     const [disabled, setDisabled] = useState(true)
-
-    // I need to use useEffect method to update state, after 
-    // button generate activity has been clicked and set fetched object
-    // to local host, and on page refresh to stay on DOM
 
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
@@ -31,7 +26,6 @@ const handleButtonClick = (e) => {
 
 }
     return (
-    // <div className="Activity">
     <section className="randomizer-container container">
     <div className="dropdown-container">
     <select className="drop-down" id="dropDown" value={optionValue} onChange={handleCategory}>
@@ -49,9 +43,16 @@ const handleButtonClick = (e) => {
     </select>
     </div>
     <article className="activity-container">
-    <p>
-        Place for activity randomized
-    </p>
+    {activity && <section className="activity-card">
+    <div>🤍</div>
+    <ul>
+        <li>Activity:{activity.activity}</li>
+        <li>Category:{activity.type}</li>
+        <li>Accessibility:{activity.accessibility}</li>
+        <li>Price:{activity.price}</li>
+        <li>Participants:{activity.participants}</li>
+    </ul>
+    </section>}
     <div className="Btn-container">
     <button className="generate-btn" disabled={disabled} onClick={(e) => handleButtonClick(e)}> Generate Activity</button>
     </div>
@@ -60,7 +61,6 @@ const handleButtonClick = (e) => {
     </div>
     </article>
     </section>
-    // </div>
     )
 }
 
