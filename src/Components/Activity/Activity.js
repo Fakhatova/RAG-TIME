@@ -4,19 +4,25 @@ import './Activity.css'
 import { useEffect } from 'react/cjs/react.development';
 
 const Activity = () => {
-    const [option, setOptionValue] = useState({});
+    const [optionValue, setOptionValue] = useState('Select Category');
     const [activity, setActivity] = useState('');
 
     // I need to use useEffect method to update state, after 
     // button generate activity has been clicked and set fetched object
     // to local host, and on page refresh to stay on DOM
+    console.log('here',optionValue)
+
+
+const handleChange = (e) => {
+    setOptionValue(e.target.value);
+}
 
     return (
     <div className="Activity">
     <section className="randomizer-container container">
     <div className="dropdown-container">
-    <select className="drop-down" id="dropDown">
-    <option value="">--Please choose an option--</option>
+    <select className="drop-down" id="dropDown" value={optionValue} onChange={handleChange}>
+    <option value=""> {optionValue}</option>
     <option value="all">All</option>
     <option value="education">Education</option>
     <option value="recreational">Recreational</option>
