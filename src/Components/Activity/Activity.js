@@ -1,5 +1,6 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './Activity.css'
 
 const Activity = () => {
@@ -57,7 +58,9 @@ const handleButtonClick = (e) => {
     <button className="generate-btn" disabled={disabled} onClick={(e) => handleButtonClick(e)}> Generate Activity</button>
     </div>
     <div>
-        <button className="home-btn">Home</button>
+    <Link to='/'>
+    <button className="home-btn">Home</button>
+    </Link>
     </div>
     </article>
     </section>

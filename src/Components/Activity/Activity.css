@@ -1,8 +1,4 @@
-/* .Activity {
-    background-color: rgb(233, 233, 245);
-    height: 100vh;
-    display: flex;
-} */
+
 .randomizer-container {
     position: relative;
     /* width: 250px;
@@ -80,6 +76,7 @@
     border: transparent;
     /* background-color: aqua; */
 }
+
 .generate-btn disabled {
     width: 200px;
     height: 37px;
