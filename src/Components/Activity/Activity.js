@@ -23,7 +23,7 @@ const Activity = () => {
     <p>
         Place for activity assecibility
     </p>
-    <div>
+    <div className="Btn-container">
     <button className="generate-btn"> Generate Activity</button>
     </div>
     <div>

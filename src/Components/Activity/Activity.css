@@ -18,3 +18,20 @@
     background: aliceblue;
     width: 70vw;
 }
+
+.Btn-container {
+    background-color: darkolivegreen;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generate-btn {
+    width: 200px;
+    height: 37px;
+    font-size: large;
+    border-radius: 3px;
+    border: transparent;
+}
