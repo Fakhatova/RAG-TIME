@@ -23,13 +23,13 @@ const Activity = () => {
     <p>
         Place for activity assecibility
     </p>
-    </article>
     <div>
     <button className="generate-btn"> Generate Activity</button>
     </div>
     <div>
         <button className="home-btn">Home</button>
     </div>
+    </article>
     </section>
     )
 }

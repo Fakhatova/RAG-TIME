@@ -5,6 +5,11 @@
 }
 
 .dropdown-container {
-    width: 40vh;
+    width: 30vw;
     background: yellow;
+}
+
+.activity-container {
+    background: aliceblue;
+    width: 70vw;
 }
