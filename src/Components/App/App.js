@@ -2,10 +2,8 @@ import {useState, useEffect} from 'react'
 import {Route, Switch, useHistory} from 'react-router-dom';
 import Activity from '../Activity/Activity'
 // import ErrorPage from '../ErrorPage/ErrorPage'
-// import { ApiData } from '../API/AppiCalls';
 import PopUp from '../Modal/PopUp';
 import './App.css';
-// ApiData.fetchAll() fetches object
 
 const  App = () => {
   const [timedPopUp, setTimedPopUp] = useState(false)
