@@ -1,6 +1,7 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import Favorites from '../Favorites/Favorites';
 import './Activity.css'
 
 const Activity = () => {
