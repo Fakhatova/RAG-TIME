@@ -10,6 +10,11 @@
 }
 
 .activity-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     background: aliceblue;
     width: 70vw;
 }
