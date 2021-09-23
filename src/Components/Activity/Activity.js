@@ -6,7 +6,8 @@ import './Activity.css'
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
     const [activity, setActivity] = useState(null);
-    const [disabled, setDisabled] = useState(true)
+    const [disabled, setDisabled] = useState(true);
+    const [favorite, setFavorite] = useState(false);
 
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
@@ -45,7 +46,7 @@ const handleButtonClick = (e) => {
     </div>
     <article className="activity-container">
     {activity && <section className="activity-card">
-    <div>🤍</div>
+    <div onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
         <li>Activity:{activity.activity}</li>
         <li>Category:{activity.type}</li>
