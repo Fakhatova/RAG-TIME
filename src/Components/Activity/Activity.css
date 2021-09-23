@@ -1,0 +1,10 @@
+.randomizer-container {
+    background-color: rgb(179, 227, 227);
+    height: 100vh;
+    display:flex;
+}
+
+.dropdown-container {
+    width: 40vh;
+    background: yellow;
+}
