@@ -12,7 +12,8 @@ const Activity = () => {
     // to local host, and on page refresh to stay on DOM
 
     return (
-    <section className="randomizer-container">
+    <div className="Activity">
+    <section className="randomizer-container container">
     <div className="dropdown-container">
     <select className="drop-down" id="dropDown">
     <option value="">--Please choose an option--</option>
@@ -40,6 +41,7 @@ const Activity = () => {
     </div>
     </article>
     </section>
+    </div>
     )
 }
 
