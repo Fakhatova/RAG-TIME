@@ -82,7 +82,7 @@ const checkFavorites = (activity) => {
     {activity && <section className="activity-card">
     <div className='favorite-btn' onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
-        <li>Activity: {activity.activity}</li>
+        <li>{activity.activity}!</li>
         <li>Category: {activity.type}</li>
         <li>Accessibility: {activity.accessibility}</li>
         <li>Price: {activity.price}</li>

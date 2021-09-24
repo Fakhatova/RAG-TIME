@@ -125,6 +125,10 @@
 
 ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .favorite-btn {
