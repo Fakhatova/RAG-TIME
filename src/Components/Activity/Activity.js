@@ -1,5 +1,5 @@
 import { ApiData } from '../API/AppiCalls';
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import Favorites from '../Favorites/Favorites';
 import './Activity.css'
@@ -21,12 +21,20 @@ const handleButtonClick = (e) => {
         ApiData.fetchAll()
         .then(data => setActivity(data))
         setOptionValue('Select Category')
+        localStorage.setItem('')
+        setDisabled(true)
     }else {
         ApiData.fetchType(optionValue)
         .then(data => setActivity(data))
         setOptionValue('Select Category')
+        setDisabled(true)
     }
 }
+useEffect(() => {
+    if (activity) {
+    localStorage.setItem('activity', JSON.stringify([activity, activity.favorite]));
+    }
+}, [activity])
 
     return (
     <div className="Activity-container">
