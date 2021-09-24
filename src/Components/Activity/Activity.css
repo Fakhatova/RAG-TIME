@@ -75,7 +75,6 @@
     align-items: center;
     align-content: center;
     width: 30vw;
-    /* background: yellow; */
 }
 
 .activity-container {
@@ -115,7 +114,7 @@
 }
 
 .drop-down {
-    background: aliceblue;
+    background: #2F415A;
     height: 40px;
     width: 200px;
 }

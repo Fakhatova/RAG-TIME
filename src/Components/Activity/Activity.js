@@ -31,7 +31,9 @@ const handleButtonClick = (e) => {
     return (
     <div className="Activity-container">
     <nav className="nav-bar">
+    <Link to='/Activity/Favorites'>
     <button className="favorites-btn">Favorites</button>
+    </Link>
     </nav>
     <section className="randomizer-container">
         <div className="dropdown-container">
