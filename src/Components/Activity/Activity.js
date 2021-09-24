@@ -26,29 +26,31 @@ const handleButtonClick = (e) => {
         .then(data => setActivity(data))
         setOptionValue('Select Category')
     }
-
 }
+
     return (
     <div className="Activity-container">
     <nav className="nav-bar">
-        <button>Favorites</button>
+    <button className="favorites-btn">Favorites</button>
     </nav>
     <section className="randomizer-container">
-    <div className="dropdown-container">
-    <select className="drop-down" id="dropDown" value={optionValue} onChange={handleCategory}>
-    <option value=""> {optionValue}</option>
-    <option value="all">All</option>
-    <option value="education">Education</option>
-    <option value="recreational">Recreational</option>
-    <option value="social">Social</option>
-    <option value="diy">DIY</option>
-    <option value="busywork">Busywork</option>
-    <option value="music">Music</option>
-    <option value="charity">Charity</option>
-    <option value="cooking">Cooking</option>
-    <option value="relaxation">Relaxation</option>
+        <div className="dropdown-container">
+    <select className="drop-down" 
+    id="dropDown" value={optionValue} 
+    onChange={handleCategory}>
+        <option value=""> {optionValue}</option>
+        <option value="all">All</option>
+        <option value="education">Education</option>
+        <option value="recreational">Recreational</option>
+        <option value="social">Social</option>
+        <option value="diy">DIY</option>
+        <option value="busywork">Busywork</option>
+        <option value="music">Music</option>
+        <option value="charity">Charity</option>
+        <option value="cooking">Cooking</option>
+        <option value="relaxation">Relaxation</option>
     </select>
-    </div>
+        </div>
     <article className="activity-container">
     {activity && <section className="activity-card">
     <div onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
@@ -61,7 +63,11 @@ const handleButtonClick = (e) => {
     </ul>
     </section>}
     <div className="Btn-container">
-    <button className="generate-btn" disabled={disabled} onClick={(e) => handleButtonClick(e)}> Generate Activity</button>
+    <button className="generate-btn" 
+    disabled={disabled} 
+    onClick={(e) => handleButtonClick(e)}>
+    Generate Activity
+    </button>
     </div>
     <div>
     <Link to='/'>

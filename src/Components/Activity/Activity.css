@@ -3,14 +3,31 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.nav-ber {
+.nav-bar {
     width: 100vw;
     height: 30%;
+    background:burlywood;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
+
+.favorites-btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    border: transparent;
+    margin: 0 25px;
+    font-size: medium;
+}
+
 .randomizer-container {
     position: relative;
     /* width: 250px;
