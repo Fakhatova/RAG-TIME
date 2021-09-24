@@ -9,6 +9,7 @@ const Activity = () => {
     const [activity, setActivity] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
+    const [localStorageFavorites,setLocalStorageFavorites] = useState([])
 
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
@@ -21,7 +22,6 @@ const handleButtonClick = (e) => {
         ApiData.fetchAll()
         .then(data => setActivity(data))
         setOptionValue('Select Category')
-        localStorage.setItem('')
         setDisabled(true)
     }else {
         ApiData.fetchType(optionValue)
@@ -31,10 +31,27 @@ const handleButtonClick = (e) => {
     }
 }
 useEffect(() => {
-    if (activity) {
-    localStorage.setItem('activity', JSON.stringify([activity, activity.favorite]));
+    const favorites = JSON.parse(localStorage.getItem('favorites'))
+    setLocalStorageFavorites(favorites)
+}, [])
+
+useEffect(() => {
+    if (favorite) {
+    checkFavorites(activity)
     }
-}, [activity])
+    
+}, [favorite])
+
+const checkFavorites = (activity) => {
+    if(localStorageFavorites===[]) {
+        console.log('i am here')
+        localStorage.setItem('favorites', JSON.stringify([activity]));
+    }else {
+        return
+    }
+    // localStorageFavorites.map(activity => activity)
+    
+}
 
     return (
     <div className="Activity-container">
@@ -63,21 +80,21 @@ useEffect(() => {
         </div>
     <article className="activity-container">
     {activity && <section className="activity-card">
-    <div onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
+    <div className='favorite-btn' onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
-        <li>Activity:{activity.activity}</li>
-        <li>Category:{activity.type}</li>
-        <li>Accessibility:{activity.accessibility}</li>
-        <li>Price:{activity.price}</li>
-        <li>Participants:{activity.participants}</li>
+        <li>Activity: {activity.activity}</li>
+        <li>Category: {activity.type}</li>
+        <li>Accessibility: {activity.accessibility}</li>
+        <li>Price: {activity.price}</li>
+        <li>Participants: {activity.participants}</li>
     </ul>
     </section>}
     <div className="Btn-container">
-    <button className="generate-btn" 
-    disabled={disabled} 
-    onClick={(e) => handleButtonClick(e)}>
-    Generate Activity
-    </button>
+        <button className="generate-btn" 
+        disabled={disabled} 
+        onClick={(e) => handleButtonClick(e)}>
+        Generate Activity
+        </button>
     </div>
     <div>
     <Link to='/'>
