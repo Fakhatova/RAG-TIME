@@ -4,7 +4,7 @@ fetchAll: () => {
     .then(res => res.json())
 },
 fetchType: (type) => {
-    return fetch('http://www.boredapi.com/api/activity?type=${type}')
+    return fetch(`http://www.boredapi.com/api/activity?type=${type}`)
     .then(res => res.json())
 }
 }
