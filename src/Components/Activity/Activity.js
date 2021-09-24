@@ -29,7 +29,11 @@ const handleButtonClick = (e) => {
 
 }
     return (
-    <section className="randomizer-container container">
+    <div className="Activity-container">
+    <nav className="nav-bar">
+        <button>Favorites</button>
+    </nav>
+    <section className="randomizer-container">
     <div className="dropdown-container">
     <select className="drop-down" id="dropDown" value={optionValue} onChange={handleCategory}>
     <option value=""> {optionValue}</option>
@@ -66,6 +70,7 @@ const handleButtonClick = (e) => {
     </div>
     </article>
     </section>
+    </div>
     )
 }
 

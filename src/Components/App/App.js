@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {Route, Switch, useHistory} from 'react-router-dom';
 import Activity from '../Activity/Activity'
+import Favorites from '../Favorites/Favorites';
 // import ErrorPage from '../ErrorPage/ErrorPage'
 import PopUp from '../Modal/PopUp';
 import './App.css';
@@ -29,9 +30,14 @@ const  App = () => {
             </main>
           )
         }}/>
-        <Route exact path='/:Activity' render={({match}) => {
+        <Route exact path='/Activity' render={({match}) => {
           return (
             <Activity/>
+          )
+        }}/>
+        <Route exact path='/Activity/Favorites' render={({match}) => {
+          return (
+            <Favorites/>
           )
         }}/>
       </Switch>
