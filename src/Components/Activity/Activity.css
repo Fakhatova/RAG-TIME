@@ -37,7 +37,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
-    
+    border-radius: 20px;
 }
 .randomizer-container:before {
     position: absolute;
@@ -87,8 +87,8 @@
     align-items: center;
     justify-content: space-around;
     color: white;
-    border-left:yellow solid 1px;
-}
+    /* border-left:yellow solid 1px;*/
+} 
 
 .Btn-container {
     width: 300px;
@@ -135,4 +135,11 @@ ul {
     display: flex;
     justify-content: flex-end;
     font-size: x-large;
+}
+
+.home-btn {
+    width: 200px;
+    height: 35px;
+    border-radius: 3px;
+    border: transparent;
 }

@@ -9,7 +9,6 @@ const Activity = () => {
     const [activity, setActivity] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
-    const [localStorageFavorites,setLocalStorageFavorites] = useState([])
 
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
@@ -30,27 +29,18 @@ const handleButtonClick = (e) => {
         setDisabled(true)
     }
 }
-useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem('favorites'))
-    setLocalStorageFavorites(favorites)
-}, [])
 
-useEffect(() => {
-    if (favorite) {
-    checkFavorites(activity)
+const toggleFavorites = (activity) => {
+    if (!favorite) {
+        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites')) || []
+        favoritesInStorage = [...favoritesInStorage, activity]
+        localStorage.setItem('favorites', JSON.stringify(favoritesInStorage))  
+    } else {
+        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites')) || []
+        favoritesInStorage = favoritesInStorage.filter((f) => f.key !== activity.key)
+        localStorage.setItem('favorites', JSON.stringify(favoritesInStorage))
     }
-    
-}, [favorite])
-
-const checkFavorites = (activity) => {
-    if(localStorageFavorites===[]) {
-        console.log('i am here')
-        localStorage.setItem('favorites', JSON.stringify([activity]));
-    }else {
-        return
-    }
-    // localStorageFavorites.map(activity => activity)
-    
+    setFavorite(!favorite)
 }
 
     return (
@@ -80,7 +70,8 @@ const checkFavorites = (activity) => {
         </div>
     <article className="activity-container">
     {activity && <section className="activity-card">
-    <div className='favorite-btn' onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div>
+    {/* <div className='favorite-btn' onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div> */}
+    <div className='favorite-btn' onClick={() => toggleFavorites(activity)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
         <li>{activity.activity}!</li>
         <li>Category: {activity.type}</li>
