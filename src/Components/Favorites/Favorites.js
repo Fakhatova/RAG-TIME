@@ -3,24 +3,32 @@ import { v4 as uuidv4 } from 'uuid';
 import './Favorites.css'
 
 const Favorites = () => {
-    const [allFavorites, setAllFavorites] = useState([])
+    const [allFavorites, setAllFavorites] = useState()
     useEffect(() => {
     setAllFavorites(JSON.parse(localStorage.getItem('favorites')))
     }, [])
 
+   // *******************************
+        /* SET FAVORITES CARD*/ 
+   // *******************************
 const displayFavorites = () => {
-return allFavorites.map(favorite => {
-    return (
-    <div className="favorites-card" key={uuidv4()}>
-    <ul>
-        <li>Activity:{favorite.activity}</li>
-        <li>Category:{favorite.type}</li>
-        <li>Accessibility:{favorite.accessibility}</li>
-        <li>Participants:{favorite.participants}</li>
-    </ul>
-    </div>
-    )
-    })
+    if(!allFavorites) {
+    return <p className="favorites-message"> You have not favorites yet .... </p>
+    }else {
+        return allFavorites.map(favorite => {
+            return (
+            <div className="favorites-card" key={uuidv4()}>
+            <ul>
+                <li>Activity:{favorite.activity}</li>
+                <li>Category:{favorite.type}</li>
+                <li>Accessibility:{favorite.accessibility}</li>
+                <li>Participants:{favorite.participants}</li>
+            </ul>
+            </div>
+            )
+            })
+    }
+
 }
 
     return (

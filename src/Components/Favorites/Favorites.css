@@ -42,3 +42,8 @@
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
     }
+
+    .favorites-message {
+        font-size: xx-large;
+        font-weight: 500;
+    }
