@@ -13,7 +13,20 @@
 //
 //
 // -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+Cypress.Commands.add('FetchData', (method, url) => {
+    cy.intercept(`${method}`,`${url}`, {
+        statusCode: 200,
+        body: {
+            "activity":"Conquer one of your fears",
+            "type":"recreational",
+            "participants":1,
+            "price":0.1,
+            "link":"",
+            "key":"8344539",
+            "accessibility":0.1
+        }
+})
+})
 //
 //
 // -- This is a dual command --
