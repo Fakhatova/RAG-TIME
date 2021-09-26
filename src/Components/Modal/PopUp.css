@@ -16,9 +16,7 @@
     height: 80vh;
     position: relative;
     padding: 20px;
-    /* width: 100%; */
     max-width: 640px;
-    /* height: 200px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
