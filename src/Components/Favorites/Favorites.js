@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import './Favorites.css'
 
 const Favorites = () => {
     const [allFavorites, setAllFavorites] = useState([])
