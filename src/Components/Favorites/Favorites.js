@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const Favorites = () => {
     const [allFavorites, setAllFavorites] = useState([])
@@ -9,7 +10,7 @@ const Favorites = () => {
 const displayFavorites = () => {
 return allFavorites.map(favorite => {
     return (
-    <div>
+    <div className="favorites-card" key={uuidv4()}>
     <ul>
         <li>Activity:{favorite.activity}</li>
         <li>Category:{favorite.type}</li>
@@ -22,7 +23,7 @@ return allFavorites.map(favorite => {
 }
 
     return (
-        <section className="activity-card">
+    <section className="activity-card">
         {displayFavorites()}
     </section>
     )
