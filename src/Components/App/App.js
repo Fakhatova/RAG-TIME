@@ -47,7 +47,7 @@ const  App = () => {
             <Favorites/>
           )
         }}/>
-        <Route exact path='/ErrorPage' render={({match}) => {
+        <Route exact path='/Activity/ErrorPage' render={({match}) => {
           return (
             <ErrorPage/>
           )

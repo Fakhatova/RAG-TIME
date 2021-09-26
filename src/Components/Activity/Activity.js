@@ -1,7 +1,6 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
 import { Link, useHistory} from 'react-router-dom';
-
 import './Activity.css'
 
 
@@ -30,8 +29,7 @@ const handleButtonClick = (e) => {
         ApiData.fetchAll()
         .then(data => setActivity(data))
         .catch((err) => {
-            console.log('here');
-        history.push('/ErrorPage')
+        history.push('/Activity/ErrorPage')
     })
         setOptionValue('Select Category')
         setDisabled(true)
@@ -39,7 +37,7 @@ const handleButtonClick = (e) => {
         ApiData.fetchType(optionValue)
         .then(data => setActivity(data))
         .catch((err) => {
-            history.push('/ErrorPage')
+            history.push('/Activity/ErrorPage')
         })
         setOptionValue('Select Category')
         setDisabled(true)
