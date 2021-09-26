@@ -1,6 +1,6 @@
 export const ApiData = {
 fetchAll: () => {
-    return fetch('http://www.boredapi.com/api/activity/hello')
+    return fetch('http://www.boredapi.com/api/activity/')
     .then(res => checkForErrors(res))
 },
 fetchType: (type) => {
@@ -9,6 +9,9 @@ fetchType: (type) => {
 }
 }
 
+   // ***********************************************
+        /* FETCH CALL ERROR HANDLE*/ 
+   // ***********************************************
 const checkForErrors = (res) => {
 if(res.ok) {
     return res.json()

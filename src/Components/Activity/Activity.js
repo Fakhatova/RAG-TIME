@@ -11,11 +11,17 @@ const Activity = () => {
     const [favorite, setFavorite] = useState(false);
     const history = useHistory()
 
+   // ***********************************************
+        /*SELECT DROP DOWN OPTION VALUE FUNCTION*/ 
+   // ***********************************************
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
     setDisabled(false)
 }
 
+   // *************************************************************
+    /* GENERATE ACTIVITY BTN HELPER FUNCTION & FETCH INVOKE*/ 
+   // *************************************************************
 const handleButtonClick = (e) => {
     e.preventDefault()
     if(optionValue === 'all') {
@@ -33,7 +39,6 @@ const handleButtonClick = (e) => {
         })
         setOptionValue('Select Category')
     }
-
 }
     return (
     <div className="Activity-container">

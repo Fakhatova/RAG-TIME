@@ -10,12 +10,18 @@ const  App = () => {
   const [timedPopUp, setTimedPopUp] = useState(false)
   const history = useHistory()
 
+   // ***********************************************
+        /* MODAL POPUP SET TIME IN USEEFFECT*/ 
+   // ***********************************************
   useEffect(() => {
     setTimeout(() => {
     setTimedPopUp(true)
     }, 2500)
   }, [])
   
+   // ***********************************************
+        /*BUTTON SUBMIT HANDLE FOR ACTIVITY START*/ 
+   // ***********************************************
   const handleStartBtn = (e) => {
   e.preventDefault()
   history.push('/Activity')
