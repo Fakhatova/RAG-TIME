@@ -9,7 +9,7 @@ const ErrorPage = () => {
             404 ERROR. SERVER ERROR... PLEASE TRY AGAIN LATER
         </p>
         <Link to='/'>
-        <button className="home-btn">Home</button>
+        <button className="homee-btn">Home</button>
         </Link>
         </div>
         
