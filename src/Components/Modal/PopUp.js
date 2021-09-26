@@ -4,7 +4,12 @@ const PopUp = (props) => {
     return(props.trigger) ? (
         <div className="popup"> 
         <article className="popup-inner">
-        <p> here is gonna be intro and rules about application</p>
+        <p> Hi there! Are you bored out of your mind? I was created to help you with just that. Wait, what's that? You're not bored? Well, I am here to give you a random activity to do alone or with friends, regardless.
+        Step 1: Choose a category or go full random. You have 8 categories from which to choose (choose wisely or don't).
+        Step 2: Now the fun part. Click the 'Generate Activity' button and BOOM! A random activity at your fingertips. I'm awesome, aren't I? 
+        Step 3: Now, the most important step: GO OUT AND ENJOY THE ACTIVITY! I am just a bunch of 1s and 0s, so I can't join you, but do have all the fun!
+        Oh almost forgot, you can favorite activity you most enjoyed! Woooah!
+        </p>
         </article>
         <button className="start-btn" onClick={(e) => props.handleStartBtn(e)}> Lets get started </button>
         </div>
