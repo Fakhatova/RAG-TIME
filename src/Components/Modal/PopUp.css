@@ -5,25 +5,29 @@
     height: 80vh;
     background-color: #282c3452;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
     border-radius: 30px;
 }
 
 .popup-inner {
+    width: 80%;
+    height: 80vh;
     position: relative;
     padding: 20px;
-    width: 100%;
+    /* width: 100%; */
     max-width: 640px;
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
+    font-size: large;
+    font-weight: 500;
+    color: aliceblue;
 }
 .start-btn {
     width: 145px;
