@@ -10,7 +10,7 @@ const Activity = () => {
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
     const history = useHistory()
-
+    
    // ***********************************************
         /*SELECT DROP DOWN OPTION VALUE FUNCTION*/ 
    // ***********************************************
@@ -25,7 +25,6 @@ const handleCategory = (e) => {
 const handleButtonClick = (e) => {
     e.preventDefault()
     if(optionValue === 'all') {
-        console.log('hi');
         ApiData.fetchAll()
         .then(data => setActivity(data))
         .catch((err) => {
@@ -33,6 +32,7 @@ const handleButtonClick = (e) => {
     })
         setOptionValue('Select Category')
         setDisabled(true)
+        setFavorite(false)
     }else {
         ApiData.fetchType(optionValue)
         .then(data => setActivity(data))
@@ -41,6 +41,7 @@ const handleButtonClick = (e) => {
         })
         setOptionValue('Select Category')
         setDisabled(true)
+        setFavorite(false)
     }
 }
 
