@@ -24,7 +24,7 @@ return allFavorites.map(favorite => {
 }
 
     return (
-    <section className="activity-card">
+    <section className="favorites-section">
         {displayFavorites()}
     </section>
     )
