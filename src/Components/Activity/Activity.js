@@ -1,7 +1,6 @@
 import { ApiData } from '../API/AppiCalls';
-import { useState, useEffect} from 'react'
+import { useState} from 'react'
 import { Link } from 'react-router-dom';
-import Favorites from '../Favorites/Favorites';
 import './Activity.css'
 
 const Activity = () => {
@@ -70,7 +69,6 @@ const toggleFavorites = (activity) => {
         </div>
     <article className="activity-container">
     {activity && <section className="activity-card">
-    {/* <div className='favorite-btn' onClick={() => setFavorite(true)}>{!favorite ? '🤍' : '🧡'}</div> */}
     <div className='favorite-btn' onClick={() => toggleFavorites(activity)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
         <li>{activity.activity}!</li>
@@ -98,11 +96,3 @@ const toggleFavorites = (activity) => {
 }
 
 export default Activity;
-
-
-// We need to set data fetched on butoon click to a localstorage and if page gets refreshed it has to grab
-// set data from localstorage and display on DOM
-// also uaer has to be able to favorite activity card
-// upon click on favorite button it should take user into a new page and 
-//show their favorited card
-// also user has to be able get back to homepage 
