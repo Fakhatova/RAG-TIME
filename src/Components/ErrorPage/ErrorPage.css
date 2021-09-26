@@ -1,0 +1,6 @@
+.error-container {
+    height: 100vh;
+    background-image: url('/src/Assets/error-48252.png');
+    background-position: center;
+    background-size: cover;
+}

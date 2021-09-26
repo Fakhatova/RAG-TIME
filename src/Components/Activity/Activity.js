@@ -25,9 +25,11 @@ const handleCategory = (e) => {
 const handleButtonClick = (e) => {
     e.preventDefault()
     if(optionValue === 'all') {
+        console.log('hi');
         ApiData.fetchAll()
         .then(data => setActivity(data))
         .catch((err) => {
+            console.log('here');
         history.push('/ErrorPage')
     })
         setOptionValue('Select Category')
