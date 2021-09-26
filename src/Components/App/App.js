@@ -41,6 +41,11 @@ const  App = () => {
             <Favorites/>
           )
         }}/>
+        <Route exact path='/ErrorPage' render={({match}) => {
+          return (
+            <ErrorPage/>
+          )
+        }}/>
       </Switch>
     </div>
   );

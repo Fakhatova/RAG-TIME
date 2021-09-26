@@ -1,6 +1,6 @@
 export const ApiData = {
 fetchAll: () => {
-    return fetch('http://www.boredapi.com/api/activity/')
+    return fetch('http://www.boredapi.com/api/activity/hello')
     .then(res => checkForErrors(res))
 },
 fetchType: (type) => {
@@ -12,7 +12,7 @@ fetchType: (type) => {
 const checkForErrors = (res) => {
 if(res.ok) {
     return res.json()
-}else {
-    throw `${res.status} ERROR. could not access server data.`
+} else if(res.error) {
+    throw res.error
 }
 }

@@ -1,14 +1,15 @@
 import { ApiData } from '../API/AppiCalls';
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
-import Favorites from '../Favorites/Favorites';
+import { Link, useHistory} from 'react-router-dom';
 import './Activity.css'
+
 
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
     const [activity, setActivity] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
+    const history = useHistory()
 
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
@@ -20,10 +21,16 @@ const handleButtonClick = (e) => {
     if(optionValue === 'all') {
         ApiData.fetchAll()
         .then(data => setActivity(data))
+        .catch((err) => {
+        history.push('/ErrorPage')
+    })
         setOptionValue('Select Category')
     }else {
         ApiData.fetchType(optionValue)
         .then(data => setActivity(data))
+        .catch((err) => {
+            history.push('/ErrorPage')
+        })
         setOptionValue('Select Category')
     }
 
