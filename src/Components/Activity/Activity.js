@@ -47,7 +47,7 @@ const toggleFavorites = (activity) => {
     <div className="Activity-container">
     <nav className="nav-bar">
     <Link to='/Activity/Favorites'>
-    <button className="favorites-btn">Favorites</button>
+    <button className="favorites-btn">Favorites </button>
     </Link>
     </nav>
     <section className="randomizer-container">
@@ -76,7 +76,6 @@ const toggleFavorites = (activity) => {
         <li>{activity.activity}!</li>
         <li>Category: {activity.type}</li>
         <li>Accessibility: {activity.accessibility}</li>
-        <li>Price: {activity.price}</li>
         <li>Participants: {activity.participants}</li>
     </ul>
     </section>}

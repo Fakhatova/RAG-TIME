@@ -1,15 +1,29 @@
+import { useEffect, useState } from "react";
 
 const Favorites = () => {
+    const [allFavorites, setAllFavorites] = useState([])
+    useEffect(() => {
+    setAllFavorites(JSON.parse(localStorage.getItem('favorites')))
+    }, [])
+
+const displayFavorites = () => {
+return allFavorites.map(favorite => {
+    return (
+    <div>
+    <ul>
+        <li>Activity:{favorite.activity}</li>
+        <li>Category:{favorite.type}</li>
+        <li>Accessibility:{favorite.accessibility}</li>
+        <li>Participants:{favorite.participants}</li>
+    </ul>
+    </div>
+    )
+    })
+}
+
     return (
         <section className="activity-card">
-    <div></div>
-    <ul>
-        <li>Activity:</li>
-        <li>Category:</li>
-        <li>Accessibility:</li>
-        <li>Price:</li>
-        <li>Participants:</li>
-    </ul>
+        {displayFavorites()}
     </section>
     )
 }
