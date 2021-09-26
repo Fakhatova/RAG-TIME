@@ -5,7 +5,7 @@ import './ErrorPage.css'
 const ErrorPage = () => {
     return (
         <div className="error-container">
-        <p>
+        <p className="error-string">
             404 ERROR. SERVER ERROR... PLEASE TRY AGAIN LATER
         </p>
         <Link to='/'>
