@@ -10,7 +10,7 @@ const Activity = () => {
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
     const history = useHistory()
-    
+
    // ***********************************************
         /*SELECT DROP DOWN OPTION VALUE FUNCTION*/ 
    // ***********************************************
@@ -20,7 +20,7 @@ const handleCategory = (e) => {
 }
 
    // *************************************************************
-    /* GENERATE ACTIVITY BTN HELPER FUNCTION & FETCH INVOKE*/ 
+        /* GENERATE ACTIVITY BTN HELPER FUNCTION & FETCH INVOKE*/ 
    // *************************************************************
 const handleButtonClick = (e) => {
     e.preventDefault()
@@ -44,6 +44,10 @@ const handleButtonClick = (e) => {
         setFavorite(false)
     }
 }
+
+   // *******************************************************
+        /* SET DATA TO LOCALSTORAGE ON FAVORITE BUTTON*/ 
+   // *******************************************************
 
 const toggleFavorites = (activity) => {
     if (!favorite) {
