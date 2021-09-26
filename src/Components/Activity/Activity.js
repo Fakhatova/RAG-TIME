@@ -1,6 +1,6 @@
 import { ApiData } from '../API/AppiCalls';
-import { useState} from 'react'
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Link, useHistory} from 'react-router-dom';
 import './Activity.css'
 
 const Activity = () => {
@@ -8,26 +8,45 @@ const Activity = () => {
     const [activity, setActivity] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [favorite, setFavorite] = useState(false);
+    const history = useHistory()
 
+   // ***********************************************
+        /*SELECT DROP DOWN OPTION VALUE FUNCTION*/ 
+   // ***********************************************
 const handleCategory = (e) => {
     setOptionValue(e.target.value);
     setDisabled(false)
 }
 
+   // *************************************************************
+        /* GENERATE ACTIVITY BTN HELPER FUNCTION & FETCH INVOKE*/ 
+   // *************************************************************
 const handleButtonClick = (e) => {
     e.preventDefault()
     if(optionValue === 'all') {
         ApiData.fetchAll()
         .then(data => setActivity(data))
+        .catch((err) => {
+        history.push('/Activity/ErrorPage')
+    })
         setOptionValue('Select Category')
         setDisabled(true)
+        setFavorite(false)
     }else {
         ApiData.fetchType(optionValue)
         .then(data => setActivity(data))
+        .catch((err) => {
+            history.push('/Activity/ErrorPage')
+        })
         setOptionValue('Select Category')
         setDisabled(true)
+        setFavorite(false)
     }
 }
+
+   // *******************************************************
+        /* SET DATA TO LOCALSTORAGE ON FAVORITE BUTTON*/ 
+   // *******************************************************
 
 const toggleFavorites = (activity) => {
     if (!favorite) {

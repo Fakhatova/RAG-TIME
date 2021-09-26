@@ -1,0 +1,27 @@
+.error-container {
+    height: 100vh;
+    background-image: url('/src/Assets/error-48252.png');
+    background-position: center;
+    background-size: cover;
+    color: #ff0000;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-string {
+font-weight: 700;
+}
+
+.homee-btn {
+    height: 30px;
+    width: 120px;
+    border-radius: 3px;
+    border: transparent;
+    background: red;
+    font-weight: 800;
+    margin: 20px;
+}

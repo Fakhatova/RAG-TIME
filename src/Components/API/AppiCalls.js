@@ -1,18 +1,23 @@
 export const ApiData = {
 fetchAll: () => {
     return fetch('http://www.boredapi.com/api/activity/')
-    .then(res => res.json())
+    .then(res => checkForErrors(res))
 },
 fetchType: (type) => {
     return fetch(`http://www.boredapi.com/api/activity?type=${type}`)
-    .then(res => res.json())
+    .then(res => checkForErrors(res))
 }
 }
 
+   // ***********************************************
+        /* FETCH CALL ERROR HANDLE*/ 
+   // ***********************************************
 const checkForErrors = (res) => {
+    console.log(res);
 if(res.ok) {
     return res.json()
-}else {
-    throw `${res.status} ERROR. could not access server data.`
+} else if(res.error) {
+    console.log(res);
+    throw res.error
 }
 }
