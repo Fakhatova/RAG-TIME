@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Link, useHistory} from 'react-router-dom';
 import './Activity.css'
 
-
 const Activity = () => {
     const [optionValue, setOptionValue] = useState('Select Category');
     const [activity, setActivity] = useState(null);
