@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import {Route, Switch, useHistory} from 'react-router-dom';
 import Activity from '../Activity/Activity'
 import Favorites from '../Favorites/Favorites';
-// import ErrorPage from '../ErrorPage/ErrorPage'
+import ErrorPage from '../ErrorPage/ErrorPage'
 import PopUp from '../Modal/PopUp';
 import './App.css';
 
@@ -20,6 +20,7 @@ const  App = () => {
   e.preventDefault()
   history.push('/Activity')
   }
+
     return (
     <div className="App-container">
       <Switch>
