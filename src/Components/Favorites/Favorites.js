@@ -35,7 +35,7 @@ const displayFavorites = () => {
 
     return (
         <main>
-        <nav>  
+        <nav className="favorites-nav">  
         <button className="home-btn">Home</button>
         </nav>
         <section className="favorites-section">

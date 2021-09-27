@@ -39,3 +39,11 @@
         width: 300px;
         color: #f0f8ff;
     }
+
+    .favorites-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100px;
+    }
