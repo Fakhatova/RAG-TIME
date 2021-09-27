@@ -9,7 +9,7 @@
 + [Technologies used](#technologies-used)
 + [Tools used](#tools-used)
 + [View Deployed Page](#view-deployed-page)
-+ [Contributors](#contributors)
++ [Project Owner](#project-owner)
 + [Reflections & Wins](#reflections-and-wins)
 
 ## Overview
@@ -68,7 +68,7 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
   + Slack 
   + Heroku
 
-## Proect Owner
+## Project Owner
   + [Farangiz Akhatova](https://github.com/Fakhatova)
   
 ## Reflections And Wins
