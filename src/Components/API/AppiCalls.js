@@ -1,10 +1,10 @@
 export const ApiData = {
 fetchAll: () => {
-    return fetch('http://www.boredapi.com/api/activity/')
+    return fetch('https://www.boredapi.com/api/activity/')
     .then(res => checkForErrors(res))
 },
 fetchType: (type) => {
-    return fetch(`http://www.boredapi.com/api/activity?type=${type}`)
+    return fetch(`https://www.boredapi.com/api/activity?type=${type}`)
     .then(res => checkForErrors(res))
 }
 }
