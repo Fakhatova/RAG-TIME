@@ -19,10 +19,10 @@ const displayFavorites = () => {
             return (
             <div className="favorites-card" key={uuidv4()}>
             <ul>
-                <li>Activity:{favorite.activity}</li>
-                <li>Category:{favorite.type}</li>
-                <li>Accessibility:{favorite.accessibility}</li>
-                <li>Participants:{favorite.participants}</li>
+                <li>Activity: {favorite.activity}</li>
+                <li>Category: {favorite.type}</li>
+                <li>Accessibility: {favorite.accessibility}</li>
+                <li>Participants: {favorite.participants}</li>
             </ul>
             </div>
             )

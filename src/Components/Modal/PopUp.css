@@ -33,6 +33,11 @@
     height: 35px;
     border-radius: 3px;
     border: none;
-    background: #ffe4c4;
+    background: mediumpurple;;
     font-size: larger;
+    color: #1d2831;
+}
+
+.start-btn:hover {
+    background: rgba(152, 137, 182, 0.934);
 }
