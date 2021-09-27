@@ -1,4 +1,4 @@
-# RAG-TIME 
+# **RAG-TIME**
 
 ## Table Of Contents
 + [Overview](#overview)
@@ -28,13 +28,16 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/81891209/134076601-8f53625b-3a65-4b9e-9e08-914bfb4f0281.gif)
 
 ### Using The App
- + When loading the page, a user is able to view a world map and select which country they would like to learn about. 
- + They are taken to a randomized question and asked to input and submit a guess. 
- + They are then taken to a view that lists if their answer is correct or incorrect and some other fun facts about that particular country.
- + They're able to return to the home page by clicking the `What in the World` text or `Take me home` button and select another country to continue learning!
+ + When loading the page, a user is able to view pop up modal with application instructions and start the app by clicking `Lets get started` button.
+
+ + User will be taken to a new page. User can select one of the 10 categories and generate random activity on button click.
+
+ + User can favorite activity they like. Check it by clicking `favorites` button which takes them to a new page with all favorited activities.
+
+ + User can go back home any time simply just clicking `Home` button and start over!
   <br>
  
- Or visit [deployed link](https://rag-time.herokuapp.com/)
+   Or visit [deployed link](https://rag-time.herokuapp.com/)
 
 ## Learning goals
   + Learning and implementing unfamiliar technology, outside of our [Turing School of Software and Design](turing.edu) curriculum.
@@ -69,11 +72,8 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
   + [Farangiz Akhatova](https://github.com/Fakhatova)
   
 ## Reflections And Wins
+  
 
-  + This was our first time using Typescript in any of our projects. The learning curve was steep, which was challenging for the one week time-frame we were working with. We all took the time in the first few days to teach ourselves this technology and familiarize ourselves with the documentation. After the initial adjustment period, we were able to create an efficient workflow to finish the application in a manor we were proud of!
-
-  + We took our stretch project a step further in taking on the extra step to self-teach React Hooks. This allowed us to better utilize materials available on TypeScript and to modernize the way we are writing code in React.
-
-  + We used creative problem solving to reach for a previously taught concept of local storage. We decided to take this path instead of fetching single countries in order to avoid numerous fetch calls. In doing so, we we’re attempting to keep an eye on best business practices.
+  
 
   [Return to top](#what-in-the-world)
