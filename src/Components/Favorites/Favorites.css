@@ -38,6 +38,8 @@
         margin:10px 0 0 0;
         width: 300px;
         color: #f0f8ff;
+        border-radius: 7px;
+        background-color: #00000036;
     }
 
     .favorites-nav {
