@@ -14,7 +14,10 @@ const Favorites = () => {
 const displayFavorites = () => {
     if(!allFavorites) {
     return (
+        <section className="message-container">
         <p className="favorites-message"> You have not favorites yet .... </p>
+        </section>
+        
     )
     }else {
         return allFavorites.map(favorite => {
