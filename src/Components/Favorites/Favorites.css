@@ -7,7 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-around;
     flex-direction: row;
     border-radius: 20px;
 }
@@ -33,4 +32,9 @@
     .favorites-message {
         font-size: xx-large;
         font-weight: 500;
+    }
+
+    .favorites-card {
+        margin:10px 0 0 0;
+        width: 300px;
     }
