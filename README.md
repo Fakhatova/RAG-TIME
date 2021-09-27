@@ -25,7 +25,7 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
   
 ## Examples
 
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/81891209/134076601-8f53625b-3a65-4b9e-9e08-914bfb4f0281.gif)
+
 
 ### Using The App
  + When loading the page, a user is able to view pop up modal with application instructions and start the app by clicking `Lets get started` button.
@@ -73,7 +73,10 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
   
 ## Reflections And Wins
   
-
+  * Execute all MVP requrements
+  * Ability to create application from scratch
+  * Utilize localStorage to persist data on page load and utilize it by passing to child component
+  * Use React Hooks to make application more robust 
   
 
-  [Return to top](#what-in-the-world)
+  [Return to top](#rag-time)
