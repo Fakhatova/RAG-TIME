@@ -10,6 +10,18 @@ describe("Error Page", () => {
         cy.url().should("eq", "http://localhost:3000/")
         
     })
+})
+
+describe("Wrong Url", () => {
+    it("Should display error for invalid Url", () => {
+        cy.intercept('http://www.boredapi.com/api/activity/jvskdjvkjd',  {
+            status:404
+        })
+        cy.visit('http://localhost:3000/Activity/ErrorPage')
+        .contains('404 ERROR. SERVER ERROR... PLEASE TRY AGAIN LATER')
+        cy.get('.homee-btn').click()
+        cy.url().should("eq", "http://localhost:3000/")
+    })
     
 })
 })
