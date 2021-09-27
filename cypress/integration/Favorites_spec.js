@@ -12,11 +12,15 @@ beforeEach(() => {
 describe("Favorites Page", () => {
 it("Should be able to see favorites page", () => {
     cy.visit("http://localhost:3000/Activity/Favorites")
+    cy.get("nav")
+    .get(".home-btn").contains('Home').click()
 })
 
-it("Should not be able to see favorites", () => {
+it("Should not be able to see favorites and home button", () => {
     cy.get(".favorites-section")
     cy.get(".favorites-message").contains("You have not favorites yet ....")
+    cy.get("nav")
+    .get(".home-btn").contains('Home').click()
 })
 
 it("Should be able yo see favorite activity and home button", () => {
@@ -33,6 +37,11 @@ it("Should be able yo see favorite activity and home button", () => {
             .get(".favorites-card")
             .get("ul")
             .get("li").contains("Activity")
+        cy.get("nav")
+            .get(".home-btn").contains('Home').click()
+            cy.visit("http://localhost:3000/")
+
+
 
 })
 })
