@@ -13,11 +13,9 @@ fetchType: (type) => {
         /* FETCH CALL ERROR HANDLE*/ 
    // ***********************************************
 const checkForErrors = (res) => {
-    console.log(res);
 if(res.ok) {
     return res.json()
 } else if(res.error) {
-    console.log(res);
     throw res.error
 }
 }
