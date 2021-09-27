@@ -124,10 +124,10 @@
 ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-around;
     align-items: center;
+    flex-direction: column;
 }
 
 .favorite-btn {
