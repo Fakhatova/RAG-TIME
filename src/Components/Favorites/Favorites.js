@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from "react-router-dom";
 import './Favorites.css'
 
 const Favorites = () => {
@@ -38,8 +39,10 @@ const displayFavorites = () => {
 
     return (
         <main>
-        <nav className="favorites-nav">  
+        <nav className="favorites-nav">
+        <Link to="/">
         <button className="home-btn">Home</button>
+        </Link>
         </nav>
         <section className="favorites-section">
         {displayFavorites()}
