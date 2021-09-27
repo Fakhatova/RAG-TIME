@@ -25,7 +25,7 @@ Bored to come up with ideas how to keep yourself busy and productive ? Use this 
   
 ## Examples
 
-
+![gif](/src/Assets/recording.gif)
 
 ### Using The App
  + When loading the page, a user is able to view pop up modal with application instructions and start the app by clicking `Lets get started` button.
