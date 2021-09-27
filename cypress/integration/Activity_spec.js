@@ -19,7 +19,7 @@ describe("Activity Page", () => {
             .get(".generate-btn").click()
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").contains("🤍")
-            cy.contains('ul', 'Conquer one of your fears')
+            cy.contains('ul', 'Category')
     })
 
     it("Should be able to favorite activity", () => {
@@ -30,8 +30,7 @@ describe("Activity Page", () => {
             .get(".generate-btn").click()
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").click().contains("🧡")
-            .get("ul")
-            cy.get("li").contains("Activity")
+            cy.contains('ul', 'Category')
     })
 
     it("Should be able go back to home page", () => {
