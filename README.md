@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# RAG-TIME 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table Of Contents
++ [Overview](#overview)
++ [Examples](#examples)
++ [Setup instructions](#setup-instructions)
++ [Learning Goals](#learning-goals)
++ [Future features](#future-features)
++ [Technologies used](#technologies-used)
++ [Tools used](#tools-used)
++ [View Deployed Page](#view-deployed-page)
++ [Contributors](#contributors)
++ [Reflections & Wins](#reflections-and-wins)
 
-## Available Scripts
+## Overview
+**Random activity generator**
+Yeah you heard it right!
+Bored to come up with ideas how to keep yourself busy and productive ? Use this app, give yourself a chace to try something not predicted... Have fun with it. Choose category you want to generate activity or just choose all categories. Like randomly generated activity ? Favorite it, so you can try it later gain. You can thank me later. 
 
-In the project directory, you can run:
+## Setup Instructions
+  + Run `git clone https://github.com/Fakhatova/RAG-TIME.git` into your local machine.
+  + Run `npm install` to install dependencies 
+  + Run `npm start` to open page in the browser
+  + Run `npm run cypress` to test Cypress
+  
+## Examples
 
-### `npm start`
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/81891209/134076601-8f53625b-3a65-4b9e-9e08-914bfb4f0281.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Using The App
+ + When loading the page, a user is able to view a world map and select which country they would like to learn about. 
+ + They are taken to a randomized question and asked to input and submit a guess. 
+ + They are then taken to a view that lists if their answer is correct or incorrect and some other fun facts about that particular country.
+ + They're able to return to the home page by clicking the `What in the World` text or `Take me home` button and select another country to continue learning!
+  <br>
+ 
+ Or visit [deployed link](https://rag-time.herokuapp.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Learning goals
+  + Learning and implementing unfamiliar technology, outside of our [Turing School of Software and Design](turing.edu) curriculum.
+    <br>
+    + Self teach and utilize React-Hooks.
+    <br>
+  + Generating and executing project Minimum Viable Product, design and functionality requirements for entire application.
+  + Effectively perform End-To-End Testing by utilizing Cypress Testing Library.
+  + Continue familiarizing myself building responsive web apps utilizing React framework.
 
-### `npm test`
+## Future features
+  + Add user login page
+  + Add dynamic animation to change background images to favorites page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies used
+  + React 
+  + React Hooks 
+  + React Router
+  + Cypress
+  + HTML
+  + CSS
+  
+## Tools used
+  + Zoom communications
+  + GitHub 
+  + Notion 
+  + Miro 
+  + Slack 
+  + Heroku
 
-### `npm run build`
+## Proect Owner
+  + [Farangiz Akhatova](https://github.com/Fakhatova)
+  
+## Reflections And Wins
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  + This was our first time using Typescript in any of our projects. The learning curve was steep, which was challenging for the one week time-frame we were working with. We all took the time in the first few days to teach ourselves this technology and familiarize ourselves with the documentation. After the initial adjustment period, we were able to create an efficient workflow to finish the application in a manor we were proud of!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  + We took our stretch project a step further in taking on the extra step to self-teach React Hooks. This allowed us to better utilize materials available on TypeScript and to modernize the way we are writing code in React.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  + We used creative problem solving to reach for a previously taught concept of local storage. We decided to take this path instead of fetching single countries in order to avoid numerous fetch calls. In doing so, we we’re attempting to keep an eye on best business practices.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  [Return to top](#what-in-the-world)
