@@ -19,8 +19,7 @@ describe("Activity Page", () => {
             .get(".generate-btn").click()
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").contains("🤍")
-            .get("ul")
-            cy.get("li").contains("Conquer one of your fears")
+            cy.contains('ul', 'Conquer one of your fears')
     })
 
     it("Should be able to favorite activity", () => {
@@ -45,8 +44,7 @@ describe("Activity Page", () => {
 
     it("Should be able to check favorited activities", () => {
         cy.visit("http://localhost:3000/Activity")
-        cy.get('.nav-bar')
-            .get('.favorites-btn').click()
-
+        cy.get(".nav-bar")
+            .get(".favorites-btn").click()
     })
 })
