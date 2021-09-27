@@ -13,7 +13,9 @@ const Favorites = () => {
    // *******************************
 const displayFavorites = () => {
     if(!allFavorites) {
-    return <p className="favorites-message"> You have not favorites yet .... </p>
+    return (
+        <p className="favorites-message"> You have not favorites yet .... </p>
+    )
     }else {
         return allFavorites.map(favorite => {
             return (
@@ -32,9 +34,15 @@ const displayFavorites = () => {
 }
 
     return (
-    <section className="favorites-section">
+        <main>
+        <nav>  
+        <button className="home-btn">Home</button>
+        </nav>
+        <section className="favorites-section">
         {displayFavorites()}
-    </section>
+        </section>
+        </main>
+    
     )
 }
 
