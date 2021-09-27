@@ -41,6 +41,12 @@ describe("Activity Page", () => {
             cy.get('.activity-container')
             .get('.home-btn').click()
             cy.url().should("eq", "http://localhost:3000/")
+    })
+
+    it("Should be able to check favorited activities", () => {
+        cy.visit("http://localhost:3000/Activity")
+        cy.get('.nav-bar')
+            .get('.favorites-btn').click()
 
     })
 })
