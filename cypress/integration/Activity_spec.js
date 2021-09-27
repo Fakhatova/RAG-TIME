@@ -38,6 +38,9 @@ describe("Activity Page", () => {
     it("Should be able go back to home page", () => {
         cy.visit("http://localhost:3000/Activity")
         cy.get(".randomizer-container")
-            .get('.activity-container')
+            cy.get('.activity-container')
+            .get('.home-btn').click()
+            cy.url().should("eq", "http://localhost:3000/")
+
     })
 })
