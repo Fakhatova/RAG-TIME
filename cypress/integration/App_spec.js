@@ -3,7 +3,9 @@ beforeEach(() => {
 })
 
 describe('Home-Page', () => {
+   
     it('Should be able to see home page', () => {
+        cy.visit('http://localhost:3000/')
         cy.get('.App')
         .should('be.visible')
     })

@@ -31,7 +31,7 @@ describe("Activity Page", () => {
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").click().contains("🧡")
             .get("ul")
-            cy.get("li").contains("Conquer one of your fears")
+            cy.get("li").contains("Activity")
     })
 
     it("Should be able go back to home page", () => {
