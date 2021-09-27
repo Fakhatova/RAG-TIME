@@ -15,7 +15,7 @@
 ## Overview
 **Random activity generator**
 Yeah you heard it right!
-Bored to come up with ideas how to keep yourself busy and productive ? Use this app, give yourself a chace to try something not predicted... Have fun with it. Choose category you want to generate activity or just choose all categories. Like randomly generated activity ? Favorite it, so you can try it later gain. You can thank me later. 
+Struggling to come up with ideas how to keep yourself busy and productive? Use this app. Give yourself a chance to try something not new... Have fun with it. Choose a category you want to generate an activity from, or just choose all categories. Like randomly generated activity? Favorite it so you can try it later gain. You can thank me later!
 
 ## Setup Instructions
   + Run `git clone https://github.com/Fakhatova/RAG-TIME.git` into your local machine.
