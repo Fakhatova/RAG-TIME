@@ -11,20 +11,27 @@
     width: 100vw;
     height: 40px;
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
-    /* align-content: flex-end; */
     justify-content: flex-end;
     margin: 0 0 45px 0;
 }
 
 .favorites-btn {
-    width: 100px;
+    width: 150px;
     height: 35px;
     border-radius: 3px;
     border: transparent;
     margin: 0 25px;
     font-size: medium;
+    background-color: #9370db87;
+    color: #f0f8ff;
+    cursor: pointer;
+}
+
+.favorites-btn:hover {
+    background: rgba(152, 137, 182, 0.934);
+    color: #f0f8ff;
+    cursor: pointer;
 }
 
 .randomizer-container {
@@ -39,6 +46,7 @@
     flex-direction: row;
     border-radius: 20px;
 }
+
 .randomizer-container:before {
     position: absolute;
     content: '';
@@ -56,7 +64,6 @@
     animation: animateGlow 10s ease infinite;
     }
 
-
     @keyframes animateGlow {
     0%  {
 	background-position: 0% 50%
@@ -69,14 +76,7 @@
 	}
     }
 
-
-
 .dropdown-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 30vw; */
     margin-top: 10px;
 }
 
@@ -86,8 +86,7 @@
     align-content: center;
     align-items: center;
     justify-content: space-around;
-    color: white;
-    /* border-left:yellow solid 1px;*/
+    color: #ffffff;
 } 
 
 .Btn-container {
@@ -104,32 +103,34 @@
     font-size: large;
     border-radius: 3px;
     border: transparent;
-    /* background-color: aqua; */
+    background-color: #cfb7e6;
+    color: #3077b5;
 }
 
-.generate-btn disabled {
+.generate-btn:disabled {
     width: 200px;
     height: 37px;
     font-size: large;
     border-radius: 3px;
     border: transparent;
-    background-color: grey;
+    background: rgba(0, 0, 0, 0.646);
+    color: #f0f8ff;
 }
 
 .drop-down {
     background: #2F415A;
     height: 40px;
     width: 200px;
-    color:white;
+    color:#ffffff;
 }
 
 ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-around;
     align-items: center;
+    flex-direction: column;
 }
 
 .favorite-btn {
@@ -143,4 +144,11 @@ ul {
     height: 35px;
     border-radius: 3px;
     border: transparent;
+    background: rgba(147, 112, 216, 0.632);
+    font-size: larger;
+    color: #f0f8ff;
+}
+
+.home-btn:hover {
+    background: rgba(152, 137, 182, 0.934);
 }
