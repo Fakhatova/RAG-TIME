@@ -41,9 +41,7 @@ Struggling to come up with ideas how to keep yourself busy and productive? Use t
 
 ## Learning goals
   + Learning and implementing unfamiliar technology, outside of our [Turing School of Software and Design](turing.edu) curriculum.
-    <br>
-    + Self teach and utilize React-Hooks.
-    <br>
+  + Self teach and utilize React-Hooks.
   + Generating and executing project Minimum Viable Product, design and functionality requirements for entire application.
   + Effectively perform End-To-End Testing by utilizing Cypress Testing Library.
   + Continue familiarizing myself building responsive web apps utilizing React framework.
