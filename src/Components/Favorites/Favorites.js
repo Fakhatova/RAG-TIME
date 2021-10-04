@@ -24,8 +24,8 @@ const displayFavorites = () => {
         return allFavorites.map(favorite => {
             return (
             <div className="favorites-card" key={uuidv4()}>
-            <ul>
-                <li>Activity: {favorite.activity}</li>
+            <ul> Activity:
+                <li>{favorite.activity}</li>
                 <li>Category: {favorite.type}</li>
                 <li>Accessibility: {favorite.accessibility}</li>
                 <li>Participants: {favorite.participants}</li>
