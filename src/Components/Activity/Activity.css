@@ -146,6 +146,7 @@ ul {
 .home-btn {
     width: 200px;
     height: 35px;
+    margin: 0 0 10px 0;
     border-radius: 3px;
     border: transparent;
     background: rgba(147, 112, 216, 0.632);
