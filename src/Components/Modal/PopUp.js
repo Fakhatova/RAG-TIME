@@ -4,7 +4,7 @@ const PopUp = (props) => {
     return(props.trigger) ? (
         <div className="popup"> 
         <article className="popup-inner">
-        <p> Hi there! Are you bored out of your mind? I was created to help you with just that. Wait, what's that? You're not bored? Well, I am here to give you a random activity to do alone or with friends, regardless.
+        <p className="intro-text"> Hi there! Are you bored out of your mind? I was created to help you with just that. Wait, what's that? You're not bored? Well, I am here to give you a random activity to do alone or with friends, regardless.
             <br/>
             <br/>
         Step 1: Choose a category or go full random. You have 10 categories from which to choose (choose wisely or don't).

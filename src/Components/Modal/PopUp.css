@@ -1,8 +1,8 @@
 .popup {
     top: 0;
     left: 0;
-    width: 80%;
-    height: 80vh;
+    width: 1000px;
+    height: 500px;
     background-color: #282c3452;
     display: flex;
     justify-content: center;
@@ -12,8 +12,6 @@
 }
 
 .popup-inner {
-    width: 80%;
-    height: 80vh;
     position: relative;
     padding: 20px;
     max-width: 640px;
@@ -32,6 +30,7 @@
     width: 145px;
     height: 35px;
     border-radius: 3px;
+    margin: 0 0 15px 0;
     border: none;
     background: mediumpurple;;
     font-size: larger;
