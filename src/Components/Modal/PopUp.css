@@ -1,7 +1,6 @@
 .popup {
     top: 0;
     left: 0;
-    width: 1000px;
     height: 500px;
     background-color: #282c3452;
     display: flex;
@@ -40,3 +39,70 @@
 .start-btn:hover {
     background: rgba(152, 137, 182, 0.934);
 }
+
+/*********************************************************/
+        /* EXTRA SMALL DEVICES (PHONES, 600 PX AND DOWN)*/ 
+/*********************************************************/
+
+@media only screen and (max-width: 600px) {
+    .popup {
+        top: 0;
+        left: 0;
+        /* width: 300px; */
+        height: 300px;
+        background-color: #282c3452;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 30px;
+    }
+    .popup-inner {
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        color: aliceblue;
+    }
+
+    .intro-text {
+        font-size: smaller;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .popup {
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 600px;
+        background-color: #282c3452;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 30px;
+    }
+    .popup-inner {
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        color: aliceblue;
+    }
+
+    .intro-text {
+        font-size: smaller;
+    }
+}
+
+

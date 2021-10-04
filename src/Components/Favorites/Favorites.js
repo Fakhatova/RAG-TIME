@@ -41,7 +41,7 @@ const displayFavorites = () => {
         <main>
         <nav className="favorites-nav">
         <Link to="/Activity">
-        <button className="home-btn">Home</button>
+        <button className="home-btn">Back to activities</button>
         </Link>
         </nav>
         <section className="favorites-section">
