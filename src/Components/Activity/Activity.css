@@ -1,6 +1,4 @@
 .Activity-container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +11,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     border-bottom: #23a6d547 3px solid;
-    margin: 0 0 30px 0;
+    margin: 0 0 50px 0;
     align-content: space-around;
 }
 
@@ -37,8 +35,8 @@
 
 .randomizer-container {
     position: relative;
-    height: 60vh;
-    width: 60vw;
+    height: 40vh;
+    width: 70vw;
     background-color: rgba(21, 24, 35, 0.7);
     box-shadow: inset 2px 2px 10px rgb(0 0 0 / 30%);
     display: flex;
@@ -79,34 +77,40 @@
 
 .dropdown-container {
     display: flex;
-    height: 60vh;
-    width: 60vw;
+    height: 40vh;
+    width: 70vw;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
     margin-top: 10px;
 }
 
-.activity-container {
+.drop-down {
+    background: #2F415A;
+    height: 40px;
+    width: 200px;
+    border-radius: 3px;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.select-container {
     display: flex;
-    flex-direction: column;
-    align-content: center;
     align-items: center;
-    justify-content: flex-end;
-    color: #ffffff;
-} 
+    height: 40vh;
+}
+
 
 .Btn-container {
     width: 300px;
-    height: 60px;
+    height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .generate-btn {
     width: 200px;
-    height: 37px;
+    height: 40px;
     font-size: large;
     border-radius: 3px;
     border: transparent;
@@ -117,7 +121,7 @@
 
 .generate-btn:disabled {
     width: 200px;
-    height: 37px;
+    height: 40px;
     font-size: large;
     border-radius: 3px;
     border: transparent;
@@ -125,15 +129,6 @@
     color: #f0f8ff;
     cursor: not-allowed;
 
-}
-
-.drop-down {
-    background: #2F415A;
-    height: 40px;
-    width: 200px;
-    border-radius: 3px;
-    color:#ffffff;
-    cursor: pointer;
 }
 
 ul {
@@ -151,12 +146,12 @@ ul {
     font-size: x-large;
     border-bottom: #1D2832 solid 2px;
     border-top: #1D2832 solid 2px;
+    cursor: pointer;
 }
 
 .home-btn {
     width: 200px;
-    height: 35px;
-    margin: 20px 0 10px 0;
+    height: 40px;
     border-radius: 3px;
     border: transparent;
     background: rgba(147, 112, 216, 0.632);
@@ -167,4 +162,12 @@ ul {
 
 .home-btn:hover {
     background: rgba(152, 137, 182, 0.934);
+}
+
+.activity-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    justify-content: space-evenly;
 }
