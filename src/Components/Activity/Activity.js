@@ -85,8 +85,14 @@ const toggleFavorites = (activity) => {
         <option value="cooking">Cooking</option>
         <option value="relaxation">Relaxation</option>
     </select>
-        </div>
-    <article className="activity-container">
+    <div className="Btn-container">
+        <button className="generate-btn" 
+        disabled={disabled} 
+        onClick={(e) => handleButtonClick(e)}>
+        Generate Activity
+        </button>
+    </div>
+    <article>
     {activity && <section className="activity-card">
     <div className='favorite-btn' onClick={() => toggleFavorites(activity)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
@@ -96,19 +102,11 @@ const toggleFavorites = (activity) => {
         <li>Participants: {activity.participants}</li>
     </ul>
     </section>}
-    <div className="Btn-container">
-        <button className="generate-btn" 
-        disabled={disabled} 
-        onClick={(e) => handleButtonClick(e)}>
-        Generate Activity
-        </button>
-    </div>
-    <div>
     <Link to='/'>
     <button className="home-btn">Home</button>
     </Link>
-    </div>
     </article>
+    </div>
     </section>
     </div>
     )
