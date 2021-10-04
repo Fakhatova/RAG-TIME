@@ -85,7 +85,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     color: #ffffff;
 } 
 
@@ -105,6 +105,7 @@
     border: transparent;
     background-color: #cfb7e6;
     color: #3077b5;
+    cursor: pointer;
 }
 
 .generate-btn:disabled {
@@ -115,6 +116,8 @@
     border: transparent;
     background: rgba(0, 0, 0, 0.646);
     color: #f0f8ff;
+    cursor: not-allowed;
+
 }
 
 .drop-down {
@@ -122,6 +125,7 @@
     height: 40px;
     width: 200px;
     color:#ffffff;
+    cursor: pointer;
 }
 
 ul {
@@ -147,6 +151,7 @@ ul {
     background: rgba(147, 112, 216, 0.632);
     font-size: larger;
     color: #f0f8ff;
+    cursor: pointer;
 }
 
 .home-btn:hover {
