@@ -1,4 +1,4 @@
-import { ApiData } from '../API/AppiCalls';
+import { ApiData } from '../../API/AppiCalls';
 import { useState } from 'react'
 import { Link, useHistory} from 'react-router-dom';
 import './Activity.css'
