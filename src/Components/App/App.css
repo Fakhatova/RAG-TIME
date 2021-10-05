@@ -1,15 +1,16 @@
 .App {
-  padding: 32px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
-  background-image: url('/src/Assets/Screenshot\ 2021-09-22\ at\ 1.48.06\ PM.png');/* background: gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) ; */
-  background-size: cover;
-	animation: gradient 15s ease infinite;
-  position: relative;
+    height: 100vh;
+    padding: 32px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('/src/Assets/Screenshot\ 2021-09-22\ at\ 1.48.06\ PM.png');/* background: gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) ; */
+    background-size: cover;
+    animation: gradient 15s ease infinite;
+    position: relative;
 }
 
 @keyframes gradient {
@@ -25,9 +26,8 @@
 }
 
 .App-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

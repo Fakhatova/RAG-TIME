@@ -70,6 +70,7 @@ const toggleFavorites = (activity) => {
     </nav>
     <section className="randomizer-container">
         <div className="dropdown-container">
+        <div className="select-container">
     <select className="drop-down" 
     id="dropDown" value={optionValue} 
     onChange={handleCategory}>
@@ -85,8 +86,15 @@ const toggleFavorites = (activity) => {
         <option value="cooking">Cooking</option>
         <option value="relaxation">Relaxation</option>
     </select>
-        </div>
-    <article className="activity-container">
+    </div>
+    <div className="Btn-container">
+        <button className="generate-btn" 
+        disabled={disabled} 
+        onClick={(e) => handleButtonClick(e)}>
+        Generate Activity
+        </button>
+    </div>
+    <article className="activity-card-container">
     {activity && <section className="activity-card">
     <div className='favorite-btn' onClick={() => toggleFavorites(activity)}>{!favorite ? '🤍' : '🧡'}</div>
     <ul>
@@ -96,19 +104,11 @@ const toggleFavorites = (activity) => {
         <li>Participants: {activity.participants}</li>
     </ul>
     </section>}
-    <div className="Btn-container">
-        <button className="generate-btn" 
-        disabled={disabled} 
-        onClick={(e) => handleButtonClick(e)}>
-        Generate Activity
-        </button>
-    </div>
-    <div>
     <Link to='/'>
     <button className="home-btn">Home</button>
     </Link>
-    </div>
     </article>
+    </div>
     </section>
     </div>
     )
