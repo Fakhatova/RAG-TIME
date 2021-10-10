@@ -21,7 +21,7 @@ const PopUp = (props:any):JSX.Element => {
         </article>
         <button className="start-btn" onClick={(e) => props.handleStartBtn(e)}> Lets get started </button>
         </div>
-    ) : <>""</>;
+    ) : <></>;
 }
 
 export default PopUp;
