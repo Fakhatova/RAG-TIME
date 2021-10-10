@@ -13,21 +13,20 @@ describe("Favorites Page", () => {
 it("Should be able to see favorites page", () => {
     cy.visit("http://localhost:3000/Activity/Favorites")
     cy.get("nav")
-    .get(".home-btn").contains('Home').click()
+    .get(".home-btn").contains('Back to activities').click()
 })
 
-it("Should not be able to see favorites and home button", () => {
+it("Should not be able to see favorites and back to activities", () => {
     cy.get(".favorites-section")
     cy.get(".favorites-message").contains("You have not favorites yet ....")
     cy.get("nav")
-    .get(".home-btn").contains('Home').click()
+    .get(".home-btn").contains('Back to activities').click()
 })
 
 it("Should be able yo see favorite activity and home button", () => {
     cy.visit("http://localhost:3000/Activity")
         cy.get(".randomizer-container")
             .get("#dropDown").select("all")
-        cy.get(".activity-container")
             .get(".generate-btn").click()
         cy.FetchData("GET","http://www.boredapi.com/api/Activity/")
             .get(".favorite-btn").click().contains("🧡")
