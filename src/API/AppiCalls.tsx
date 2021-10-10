@@ -3,7 +3,7 @@ fetchAll: () => {
     return fetch('https://www.boredapi.com/api/activity/')
     .then(res => checkForErrors(res))
 },
-fetchType: (type) => {
+fetchType: (type: string) => {
     return fetch(`https://www.boredapi.com/api/activity?type=${type}`)
     .then(res => checkForErrors(res))
 }
@@ -12,7 +12,7 @@ fetchType: (type) => {
    // ***********************************************
         /* FETCH CALL ERROR HANDLE*/ 
    // ***********************************************
-const checkForErrors = (res) => {
+const checkForErrors = (res:any) => {
 if(res.ok) {
     return res.json()
 } else if(res.error) {

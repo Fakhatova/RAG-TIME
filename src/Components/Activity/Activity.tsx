@@ -1,19 +1,31 @@
 import { ApiData } from '../../API/AppiCalls';
-import { useState } from 'react'
+import { MouseEvent, SetStateAction, useState } from 'react'
 import { Link, useHistory} from 'react-router-dom';
 import './Activity.css'
 
-const Activity = () => {
-    const [optionValue, setOptionValue] = useState('Select Category');
-    const [activity, setActivity] = useState(null);
-    const [disabled, setDisabled] = useState(true);
-    const [favorite, setFavorite] = useState(false);
+
+export interface IAppComponent {
+    activity: {
+        activity: string,
+        accessibility: number,
+        type: string,
+        participants: number,
+        price: number,
+        link: string,
+        key: string
+    } ,
+}
+const Activity:React.FC<IAppComponent> = (IAppComponent) => {
+    const [optionValue, setOptionValue] = useState<string>('Select Category');
+    const [activity, setActivity] = useState<null | IAppComponent["activity"]>(null);
+    const [disabled, setDisabled] = useState<boolean>(true);
+    const [favorite, setFavorite] = useState<boolean>(false);
     const history = useHistory()
 
    // ***********************************************
         /*SELECT DROP DOWN OPTION VALUE FUNCTION*/ 
    // ***********************************************
-const handleCategory = (e) => {
+const handleCategory = (e: { target: { value: SetStateAction<string>; }; }) => {
     setOptionValue(e.target.value);
     setDisabled(false)
 }
@@ -21,7 +33,7 @@ const handleCategory = (e) => {
    // *************************************************************
         /* GENERATE ACTIVITY BTN HELPER FUNCTION & FETCH INVOKE*/ 
    // *************************************************************
-const handleButtonClick = (e) => {
+const handleButtonClick = (e: MouseEvent<Element, globalThis.MouseEvent>) => {
     e.preventDefault()
     if(optionValue === 'all') {
         ApiData.fetchAll()
@@ -48,14 +60,14 @@ const handleButtonClick = (e) => {
         /* SET DATA TO LOCALSTORAGE ON FAVORITE BUTTON*/ 
    // *******************************************************
 
-const toggleFavorites = (activity) => {
+const toggleFavorites = (activity:any) => {
     if (!favorite) {
-        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites')) || []
+        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites') as string) || []
         favoritesInStorage = [...favoritesInStorage, activity]
         localStorage.setItem('favorites', JSON.stringify(favoritesInStorage))  
     } else {
-        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites')) || []
-        favoritesInStorage = favoritesInStorage.filter((f) => f.key !== activity.key)
+        let favoritesInStorage = JSON.parse(localStorage.getItem('favorites') as string) || []
+        favoritesInStorage = favoritesInStorage.filter((f: { key: any; }) => f.key !== activity.key)
         localStorage.setItem('favorites', JSON.stringify(favoritesInStorage))
     }
     setFavorite(!favorite)
@@ -90,7 +102,7 @@ const toggleFavorites = (activity) => {
     <div className="Btn-container">
         <button className="generate-btn" 
         disabled={disabled} 
-        onClick={(e) => handleButtonClick(e)}>
+        onClick={(e:MouseEvent) => handleButtonClick(e)}>
         Generate Activity
         </button>
     </div>

@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from "react-router-dom";
 import './Favorites.css'
+import { IAppComponent } from "../Activity/Activity";
 
 const Favorites = () => {
-    const [allFavorites, setAllFavorites] = useState()
+    const [allFavorites, setAllFavorites] = useState<[]>()
     useEffect(() => {
-    setAllFavorites(JSON.parse(localStorage.getItem('favorites')))
+    return setAllFavorites(JSON.parse(localStorage.getItem('favorites') as string));
     }, [])
 
    // *******************************
@@ -21,7 +22,7 @@ const displayFavorites = () => {
         
     )
     }else {
-        return allFavorites.map(favorite => {
+        return allFavorites.map((favorite: IAppComponent['activity']) => {
             return (
             <div className="favorites-card" key={uuidv4()}>
             <ul> Activity:

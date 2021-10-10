@@ -7,7 +7,7 @@ import PopUp from '../Modal/PopUp';
 import './App.css';
 
 const  App = () => {
-  const [timedPopUp, setTimedPopUp] = useState(false)
+  const [timedPopUp, setTimedPopUp] = useState<boolean>(false)
   const history = useHistory()
 
    // ***********************************************
@@ -22,7 +22,7 @@ const  App = () => {
    // ***********************************************
         /*BUTTON SUBMIT HANDLE FOR ACTIVITY START*/ 
    // ***********************************************
-  const handleStartBtn = (e) => {
+  const handleStartBtn = (e:any) => {
   e.preventDefault()
   history.push('/Activity')
   }
@@ -39,7 +39,15 @@ const  App = () => {
         }}/>
         <Route exact path='/Activity' render={({match}) => {
           return (
-            <Activity/>
+            <Activity activity={{
+              activity: '',
+              accessibility: 0,
+              type: '',
+              participants: 0,
+              price: 0,
+              link: '',
+              key: ''
+            }}/>
           )
         }}/>
         <Route exact path='/Activity/Favorites' render={({match}) => {
