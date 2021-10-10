@@ -55,6 +55,7 @@ Struggling to come up with ideas how to keep yourself busy and productive? Use t
   + React Hooks 
   + React Router
   + Cypress
+  + TypeScript
   + HTML
   + CSS
   
@@ -65,6 +66,7 @@ Struggling to come up with ideas how to keep yourself busy and productive? Use t
   + Miro 
   + Slack 
   + Heroku
+  + Travis CI
 
 ## Project Owner
   + [Farangiz Akhatova](https://github.com/Fakhatova)
@@ -74,7 +76,7 @@ Struggling to come up with ideas how to keep yourself busy and productive? Use t
   * Execute all MVP requrements
   * Ability to create application from scratch
   * Utilize localStorage to persist data on page load and utilize it by passing to child component
-  * Use React Hooks to make application more robust 
+  * Use React Hooks and typeScript to make application more robust 
   
 
   [Return to top](#rag-time)
