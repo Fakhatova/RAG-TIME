@@ -15,7 +15,6 @@ describe("Activity Page", () => {
         cy.visit("http://localhost:3000/Activity")
         cy.get(".randomizer-container")
             .get("#dropDown").select("all")
-            cy.get(".activity-container")
             .get(".generate-btn").click()
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").contains("🤍")
@@ -26,7 +25,6 @@ describe("Activity Page", () => {
         cy.visit("http://localhost:3000/Activity")
         cy.get(".randomizer-container")
             .get("#dropDown").select("all")
-            cy.get(".activity-container")
             .get(".generate-btn").click()
             cy.FetchData("GET","http://www.boredapi.com/api/activity/")
             .get(".favorite-btn").click().contains("🧡")
@@ -36,7 +34,6 @@ describe("Activity Page", () => {
     it("Should be able go back to home page", () => {
         cy.visit("http://localhost:3000/Activity")
         cy.get(".randomizer-container")
-            cy.get('.activity-container')
             .get('.home-btn').click()
             cy.url().should("eq", "http://localhost:3000/")
     })
